@@ -126,6 +126,7 @@ def makeSVG(data):
     dataDict = {
         "contentBar": contentBar,
         "barCSS": barCSS,
+        "recentlyPlayed": recentlyPlayed,
         "artistName": artistName,
         "songName": songName,
         "image": image,
