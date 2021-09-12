@@ -109,7 +109,7 @@ def makeSVG(data):
         currentStatus = "Was playing:"
         recentPlaysP = recentlyPlayed()
         recentPlaysLength2 = len(recentPlaysP["items"])
-        itemIndex = random.randint(1, recentPlaysLength2 5)
+        itemIndex = random.randint(0, recentPlaysLength2 - 5)
 
         recentPlays = recentlyPlayed()
         recentPlaysLength = len(recentPlays["items"])
@@ -130,7 +130,7 @@ def makeSVG(data):
     dataDict = {
         "contentBar": contentBar,
         "barCSS": barCSS,
-        "recentlyPlayed": recentlyPlayed,
+        "recentlyPlayed": recentlyPlayesd,
         "artistName": artistName,
         "songName": songName,
         "image": image,
