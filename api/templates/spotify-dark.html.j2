@@ -1,9 +1,9 @@
-<svg width="350" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <foreignObject width="350" height="150">
+<svg width="400" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <foreignObject width="400" height="150">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <style>
                 .main {
-                    width: 330px;
+                    width: 350px;
                     height: 130px;
                     display: flex;
                     justify-content: center;
@@ -11,6 +11,7 @@
                     background-color: rgb(37, 37, 37);
                     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                     border-radius: 10px;
+                    padding: 0 15px;
                 }
                 .currentStatus {
                     float: left;
@@ -20,7 +21,7 @@
                     margin-left: 10px;
                 }
                 .container {
-                    width: 350px;
+                    width: 400px;
                     height: 150px;
                     border-radius: 10px;
                     background-color:#000000;
@@ -64,12 +65,25 @@
                     position: absolute;
                     margin: -20px 0 0 0px;
                 }
+                #bars-reflecting{
+                    -webkit-transform: scaleY(-1);
+                    -moz-transform: scaleY(-1);
+                    -o-transform: scaleY(-1);
+                    -ms-transform: scaleY(-1);
+                    transform: scaleY(-1);
+                    width: 40px;
+                    height: 30px;
+                    bottom: 23px;
+                    position: absolute;
+                    margin: -20px 0 0 0px;
+                }
                 .bar {
-                    width: 3px;
+                    width: 2px;
+                    border-radius: 10px;
                     bottom: 1px;
                     height: 3px;
                     position: absolute;
-                    background: #1DB954cc;
+                    background: #F84242;
                     animation: sound 0ms -800ms linear infinite alternate;
                 }
                 div {
@@ -100,6 +114,7 @@
                     <div class="song">{{songName}}</div>
                     <div class="artist">{{artistName}}</div>
                     <div id="bars">{{contentBar|safe}}</div>
+                    <div id="bars-reflecting">{{contentBar|safe}}</div>
                 </div>
             </div>
 
