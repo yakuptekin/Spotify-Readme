@@ -44,6 +44,7 @@
                     text-overflow: ellipsis;
                     font-weight: bold;
                     line-height: 28px;
+                    width: 215px;
                 }
                 .artist {
                     color: #fff;
@@ -85,12 +86,19 @@
                 }
                 .bar {
                     width: 2px;
-                    border-radius: 10px;
+                    border-radius: 25%;
                     bottom: 1px;
                     height: 3px;
                     position: absolute;
                     background: #F84242;
                     animation: sound 0ms -800ms linear infinite alternate;
+                }
+                .spotify{
+                    position: absolute;
+                    width: 25px;
+                    height: auto;
+                    right: 5px;
+                    top: 0px;
                 }
                 div {
                     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
@@ -109,14 +117,14 @@
                 {{barCSS|safe}}
             </style>
 
-            <!-- <div class="currentStatus">{{status}}</div> -->
-
+            <div class="currentStatus">{{status}}</div>
             <div class="main">
                 <a class="cover" href="{}" target="_blank">
                     <img src="data:image/png;base64, {{image}}" />
                 </a>
 
                 <div class="content">
+                    <img class="spotify" src="spotify_icon.png" alt="Spotify">
                     <div class="song">{{songName}}</div>
                     <div class="artist">{{artistName}}</div>
                     <div id="bars">{{contentBar|safe}}</div>
